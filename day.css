@@ -1,0 +1,143 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #fffbf2; /* Light cream background for a sunny feel */
+
+    color: #333; /* Dark text for better readability */
+
+    margin: 0;
+
+    padding: 0;
+
+    text-align: center;
+
+}
+ 
+header {
+
+    background: #f39c12; /* Warm yellow-orange color */
+
+    padding: 15px;
+
+}
+ 
+header h1 {
+
+    font-size: 28px;
+
+    color: #fff; /* White text for a strong contrast with header background */
+
+}
+ 
+header p {
+
+    font-size: 16px;
+
+    color: #fff; /* White text to match header style */
+
+    margin-top: 5px;
+
+}
+ 
+section {
+
+    max-width: 750px;
+
+    margin: 20px auto;
+
+    padding: 15px;
+
+    background: #ffffff; /* White background for freshness */
+
+    border-radius: 8px;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for a lift effect */
+
+}
+ 
+h2 {
+
+    color: #e74c3c; /* Vibrant red-orange for headings, a lively accent color */
+
+    border-bottom: 2px solid #e74c3c; /* Adding a bit of flair with the same color */
+
+    padding-bottom: 5px;
+
+    margin-bottom: 10px;
+
+}
+ 
+ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+ 
+ul li {
+
+    background: #f1c40f; /* A bright yellow for each item for vibrancy */
+
+    padding: 12px;
+
+    margin: 8px 0;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    text-align: left;
+
+}
+ 
+.details p {
+
+    font-size: 15px;
+
+    background: #f39c12; /* Matching the header color to keep a consistent theme */
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    margin: 8px 0;
+
+    text-align: left;
+
+}
+ 
+.book-btn {
+
+    background: #e74c3c; /* Red-orange button for high contrast */
+
+    color: #fff;
+
+    padding: 12px 25px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+
+    display: block;  
+
+    width: fit-content;  
+
+    margin: 20px auto;  
+
+    text-align: center;
+
+}
+ 
+.book-btn:hover {
+
+    background: #c0392b; /* Darker red on hover for a more dynamic interaction */
+
+}

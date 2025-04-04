@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="rentalApp">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Castlevania Equipment Rental</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Lobster&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="cartEquip.css" />
+  </head>
+
+  <body ng-controller="rentalCtrl">
+    <header class="site-header">
+      <div class="top-bar">
+        <div class="contact-info">
+          Contact: 8080238269 (Open 365 Days)
+        </div>
+        <div class="nav-links">
+          <a href="#">Search</a>
+          <a href="#">Login</a>
+          <a href="#">Sign Up</a>
+          <a href="#">Book Now</a>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <h1 class="site-logo" id="castlevaniaFont">Castlevania</h1>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">Passes</a></li>
+          <li><a href="#">Rentals</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <h2>Equipment Rental</h2>
+      <p>Your one-stop shop for all your adventure gear needs!</p>
+    </section>
+    <section class="equipment-section">
+      <h3>Browse & Rent Equipment</h3>
+      <div class="equipment-list">
+        <div class="equipment-card" ng-repeat="item in equipment">
+          <img ng-src="{{item.image}}" alt="{{item.name}}" />
+          <h4>{{item.name}}</h4>
+          <p class="price">Price: ₹{{item.price}} / day</p>
+          <p class="desc">{{item.description}}</p>
+          <button class="rent-btn" ng-click="addToCart(item)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    <section class="cart-section" ng-show="cart.length > 0">
+      <h3>Your Cart</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Equipment</th>
+            <th>Price (per day)</th>
+            <th>Quantity</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="cartItem in cart">
+            <td>{{cartItem.name}}</td>
+            <td>₹{{cartItem.price}}</td>
+            <td>
+              <input type="number" min="1" ng-model="cartItem.quantity" ng-change="updateCartTotal()" />
+            </td>
+            <td>
+              <button class="remove-btn" ng-click="removeFromCart(cartItem)">X</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cart-total">
+        <p>Total: ₹{{cartTotal}}</p>
+        <button class="checkout-btn" ng-click="checkout()">Checkout</button>
+        <button class="payment-btn">Proceed to Payment</button>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <p>© 2025 Castlevania Adventure Park</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+
+</html>

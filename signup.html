@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up - Castlevania Adventure Park</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Lobster&family=Poppins:wght@300;400;600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <style>
+            .message {
+                padding: 10px;
+                border-radius: 5px;
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .success-message {
+                background-color: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+            }
+
+            .error-message {
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+            }
+
+            .error-text {
+                color: red;
+                font-size: 0.9em;
+                display: block;
+                margin-top: 5px;
+            }
+
+        </style>
+    </head>
+
+    <body ng-controller="SignUpController">
+        <div class="container">
+            <h1>🎢 Welcome to Castlevania! 🎈</h1>
+            <p>Sign up to unlock amazing rides & surprises! 🎠</p>
+
+            <div ng-if="message" class="message" ng-class="signupSuccess ? 'success-message' : 'error-message'">
+                {{message}}
+            </div>
+
+            <form name="signupForm" ng-submit="submitSignup()" novalidate>
+                <label for="name">🎭 Your Name:</label>
+                <input type="text" id="name" name="name" ng-model="user.name" placeholder="Enter your name" required>
+                <span class="error-text" ng-show="signupForm.name.$touched && signupForm.name.$invalid">⚠️ Please enter
+                    your name.</span>
+
+                <label for="age">🎂 Your Age:</label>
+                <input type="number" id="age" name="age" ng-model="user.age" min="18" max="100"
+                    placeholder="Enter your age" required>
+                <span class="error-text"
+                    ng-show="signupForm.age.$touched && (signupForm.age.$invalid || user.age < 18 || user.age > 100)">⚠️
+                    Age must be between 18 and 100.</span>
+
+                <label for="avatar">🏆 Choose Your Avatar:</label>
+                <select id="avatar" name="avatar" ng-model="user.avatar" required>
+                    <option value="" disabled selected hidden>Pick your adventure role</option>
+                    <option value="queen">👸 Queen of Thrills</option>
+                    <option value="king">🤴 King of Adventure</option>
+                    <option value="mystery">👽 Mystery Rider</option>
+                </select>
+                <span class="error-text" ng-show="signupForm.avatar.$touched && signupForm.avatar.$invalid">⚠️ Please
+                    select an avatar.</span>
+
+                <label for="email">📧 Email:</label>
+                <input type="email" id="email" name="email" ng-model="user.email" placeholder="Enter your email"
+                    required>
+                <span class="error-text" ng-show="signupForm.email.$touched && signupForm.email.$invalid">⚠️ Please
+                    enter a valid email.</span>
+
+                <label for="password">🔐 Set a Secret Code:</label>
+                <input type="password" id="password" name="password" ng-model="user.password"
+                    placeholder="Shhh! Keep it secret!" ng-minlength="6" required>
+                <span class="error-text" ng-show="signupForm.password.$touched && signupForm.password.$invalid">⚠️
+                    Password must be at least 6 characters.</span>
+
+                <label for="confirmPassword">🔐 Confirm Secret Code:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" ng-model="user.confirmPassword"
+                    placeholder="Confirm your password" required>
+                <span class="error-text"
+                    ng-show="signupForm.confirmPassword.$touched && user.password !== user.confirmPassword">⚠️ Oops!
+                    Passwords don't match!</span>
+
+                <label for="specialOffers">
+                    <input type="checkbox" id="specialOffers" ng-model="user.specialOffers">
+                    🎁 Get special ride offers & deals!
+                </label>
+
+                <button type="submit" ng-disabled="signupForm.$invalid || user.password !== user.confirmPassword">🎢
+                    Let's Go! 🎠</button>
+            </form>
+
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+            <p><a href="/">Back to Homepage</a></p>
+        </div>
+
+        <script>
+            var app = angular.module("myApp", []);
+
+            app.controller("SignUpController", function ($scope, $http, $timeout) {
+                $scope.user = {};
+                $scope.message = "";
+                $scope.signupSuccess = false;
+
+                $scope.submitSignup = function () {
+                    if ($scope.signupForm.$valid && $scope.user.password === $scope.user.confirmPassword) {
+                        $scope.message = "Signing up...";
+                        $scope.user.name = $scope.user.name.trim();
+                        $scope.user.email = $scope.user.email.trim();
+                        const userData = { ...$scope.user };
+                        delete userData.confirmPassword;
+                        $http.post('/signup', userData)
+                            .then(function (response) {
+                                if (response.data.success) {
+                                    $scope.message = '🎉 Signup successful! Redirecting to login...';
+                                    $scope.signupSuccess = true;
+                                    $timeout(function () {
+                                        window.location.href = "login.html";
+                                    }, 2000);
+                                } else {
+                                    $scope.message = response.data.message || '❌ Signup failed. Try again!';
+                                    $scope.signupSuccess = false;
+                                }
+                            })
+                            .catch(function (error) {
+                                $scope.message = error.data && error.data.message ? error.data.message : '❌ Signup failed. Try again!';
+                                $scope.signupSuccess = false;
+                            });
+                    }
+                };
+            });
+        </script>
+    </body>
+
+</html>

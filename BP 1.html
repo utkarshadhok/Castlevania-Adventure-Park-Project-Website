@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookingApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adventure Park Booking</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-messages.min.js"></script>
+<style>
+
+        :root {
+
+            --cream: #f9f1f0;
+
+            --rose-quartz: #fadcd9;
+
+            --dusty-rose: #f8afa6;
+
+            --coral: #f79489;
+
+        }
+ 
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: var(--cream);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            margin: 0;
+
+        }
+ 
+        .container {
+
+            background: white;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            width: 300px;
+
+            text-align: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+ 
+        h2 {
+
+            color: var(--coral);
+
+            font-size: 24px;
+
+            margin-bottom: 20px;
+
+        }
+ 
+        form {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            width: 100%;
+
+        }
+ 
+        input, button {
+
+            width: 100%;
+
+            margin: 5px 0;
+
+            padding: 10px;
+
+            border-radius: 5px;
+
+            font-size: 16px;
+
+        }
+ 
+        input {
+
+            border: 1px solid var(--dusty-rose);
+
+            background-color: var(--rose-quartz);
+
+        }
+ 
+        button {
+
+            background-color: var(--coral);
+
+            color: white;
+
+            border: none;
+
+            cursor: pointer;
+
+            transition: background-color 0.3s ease;
+
+        }
+ 
+        button:hover {
+
+            background-color: var(--dusty-rose);
+
+        }
+ 
+        h3 {
+
+            color: var(--dusty-rose);
+
+            margin-top: 20px;
+
+        }
+ 
+        .error {
+
+            color: red;
+
+            font-size: 12px;
+
+            text-align: left;
+
+            width: 100%;
+
+            margin-bottom: 5px;
+
+        }
+</style>
+</head>
+<body ng-controller="BookingController">
+<div class="container">
+<h2>Adventure Park Booking</h2>
+<form name="bookingForm" ng-submit="submitForm(paymentMethod)" novalidate>
+<input type="text" name="fullName" ng-model="formData.fullName" placeholder="Full Name" required>
+<div class="error" ng-messages="bookingForm.fullName.$error" ng-if="bookingForm.fullName.$touched">
+<div ng-message="required">⚠️ Please enter your full name.</div>
+</div>
+ 
+            <input type="text" name="aadharCard" ng-model="formData.aadharCard" placeholder="Aadhar Card Number" ng-pattern="/^\d{12}$/" required>
+<div class="error" ng-messages="bookingForm.aadharCard.$error" ng-if="bookingForm.aadharCard.$touched">
+<div ng-message="required">⚠️ Aadhar Card number is required.</div>
+<div ng-message="pattern">⚠️ Please enter a valid 12-digit Aadhar number.</div>
+</div>
+ 
+            <input type="number" name="adults" ng-model="formData.adults" placeholder="Number of Adults" min="0" max="30" ng-change="validateAdults()" required>
+<div class="error" ng-messages="bookingForm.adults.$error" ng-if="bookingForm.adults.$touched">
+<div ng-message="required">⚠️ Number of adults is required.</div>
+<div ng-message="min">⚠️ Number of adults cannot be negative.</div>
+<div ng-message="max">⚠️ Maximum 30 adults allowed.</div>
+</div>
+ 
+            <input type="number" name="kids" ng-model="formData.kids" placeholder="Number of Kids (Above 5 years)" min="0" max="20" ng-change="validateKids()" required>
+<div class="error" ng-messages="bookingForm.kids.$error" ng-if="bookingForm.kids.$touched">
+<div ng-message="required">⚠️ Number of kids is required.</div>
+<div ng-message="min">⚠️ Number of kids cannot be negative.</div>
+<div ng-message="max">⚠️ Maximum 20 kids allowed.</div>
+</div>
+ 
+            <input type="text" name="couponCode" ng-model="formData.couponCode" placeholder="Coupon Code (Optional)">
+ 
+            <h3>Select Payment Method</h3>
+<button type="submit" ng-click="paymentMethod='cd'" ng-disabled="bookingForm.$invalid">Pay with Credit/Debit Card</button>
+<button type="submit" ng-click="paymentMethod='cash'" ng-disabled="bookingForm.$invalid">Pay with Cash</button>
+</form>
+</div>
+ 
+    <script>
+
+        angular.module('bookingApp', ['ngMessages'])
+
+            .controller('BookingController', function($scope, $window) {
+
+                $scope.formData = {
+
+                    adults: 0,
+
+                    kids: 0
+
+                };
+ 
+                                $scope.validateAdults = function() {
+                    if ($scope.formData.adults > 30) {
+
+                        $scope.formData.adults = 30;
+                    }
+                    if ($scope.formData.adults < 0) {
+
+                        $scope.formData.adults = 0;
+                    }
+                };
+ 
+                $scope.validateKids = function() {
+
+                    if ($scope.formData.kids > 20) {
+
+                        $scope.formData.kids = 20;
+
+                    }
+
+                    if ($scope.formData.kids < 0) {
+
+                        $scope.formData.kids = 0;
+
+                    }
+
+                };
+ 
+                $scope.submitForm = function(paymentMethod) {
+
+                    if ($scope.bookingForm.$valid) {
+
+                        if (paymentMethod === 'cd') {
+
+                            $window.location.href = "cd.html"; 
+
+                        } else {
+
+                            $window.location.href = "thank.html"; 
+
+                        }
+
+                    }
+
+                };
+
+            });
+</script>
+</body>
+</html>
+
+ 
