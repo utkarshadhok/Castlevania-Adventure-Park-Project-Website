@@ -79,7 +79,7 @@
                     if ($scope.loginForm.$valid) {
                         $scope.message = "Logging in...";
 
-                        $http.post('/login', $scope.user)
+                        $http.post('http://localhost:3000/login', $scope.user)
                             .then(function (response) {
                                 if (response.data.success) {
                                     $scope.message = "Login successful! Redirecting...";

@@ -4,9 +4,15 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const bcrypt = require('bcryptjs');
 const session = require('express-session');
+const cors = require("cors");
 
 const app = express();
 const port = 3000;
+app.use(cors({
+  origin: 'http://127.0.0.1:5500', // Adjust this to your frontend URL
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 const db = mysql.createPool({
   host: 'localhost',
@@ -69,7 +75,7 @@ app.post('/signup', async (req, res) => {
   }
 });
 
-app.post('/login.html', async (req, res) => {
+app.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
     if (!email || !password) {

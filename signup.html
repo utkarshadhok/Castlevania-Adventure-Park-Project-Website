@@ -119,7 +119,7 @@
                         $scope.user.email = $scope.user.email.trim();
                         const userData = { ...$scope.user };
                         delete userData.confirmPassword;
-                        $http.post('/signup', userData)
+                        $http.post('http://localhost:3000/signup', userData)
                             .then(function (response) {
                                 if (response.data.success) {
                                     $scope.message = '🎉 Signup successful! Redirecting to login...';
