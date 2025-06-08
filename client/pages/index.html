@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description"
+            content="Castlevania Adventure Park – Experience thrilling rides, magical experiences, and unforgettable memories." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Castlevania Adventure Park</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Lobster&family=Poppins:wght@300;400;600&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <!-- Base Styles -->
+        <link rel="stylesheet" href="/client/styles/main.css" />
+        <!-- Component Styles -->
+        <link rel="stylesheet" href="/client/styles/components/auth.css" />
+        <!-- Page Specific Styles -->
+        <link rel="stylesheet" href="/client/styles/pages/home.css" />
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo">Castlevania
+            </div>
+            <div class="menu">
+                <ul class="nav-links">
+                    <li><a href="/" class="active"><i class="fas fa-home icon-text"></i>Home</a></li>
+                    <li><a href="/dreamfeast.html"><i class="fas fa-utensils icon-text"></i>DreamFeast</a></li>
+                    <li><a href="/booking.html"><i class="fas fa-ticket-alt icon-text"></i>Book Now</a></li>
+                    <li><a href="#" class="nav-auth-btn"><i class="fas fa-user"></i> Login/Sign up</a></li>
+                </ul>
+            </div>
+            <form action="#" class="search-form">
+                <input type="text" id="search" placeholder="Search here..." />
+                <button type="button" class="search-icon">
+                    <i class="fa fa-search"></i>
+                </button>
+                <button type="button" class="close-icon">
+                    <i class="fa fa-times"></i>
+                </button>
+            </form>
+        </nav>
+
+        <section class="hero">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide active">
+                        <img src="/images/slider1.jpg" alt="Welcome to Castlevania">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/slider2.jpg" alt="Experience the Thrill">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/slider3.jpeg" alt="Adventure Awaits">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/slider4.jpg" alt="Family Fun">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/slider5.jpg" alt="Night Adventures">
+                    </div>
+                </div>
+                <div class="slider-overlay"></div>
+                <div class="hero-content">
+                    <h1>Welcome to <span class="castlevaniaFont">Castlevania</span></h1>
+                    <p>Your gateway to thrilling adventures and magical experiences.</p>
+                    <a href="#attractions" class="explore-btn">
+                        <i class="fas fa-compass"></i>
+                        Explore Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>About <span class="castlevaniaFont">Castlevania</span></h2>
+                    <div class="section-divider">
+                        <div class="divider-line"></div>
+                        <div class="divider-icon">
+                            <i class="fas fa-castle"></i>
+                        </div>
+                        <div class="divider-line"></div>
+                    </div>
+                    <p>Castlevania is a premier adventure park offering over 50 attractions—from adrenaline-pumping
+                        rides to family-friendly fun.</p>
+                    <p>With over <strong>1 million</strong> happy guests, we pride ourselves on exceptional service and
+                        unforgettable memories. Come join us for your next adventure!</p>
+                </div>
+
+                <div class="about-features">
+                    <div class="feature-card" data-aos="fade-up">
+                        <div class="feature-icon">
+                            <i class="fas fa-dragon"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Mythical Rides</h3>
+                            <p>Experience our signature roller coasters and themed attractions that defy gravity and
+                                imagination.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Live Shows</h3>
+                            <p>Witness spectacular performances featuring talented artists, special effects, and
+                                medieval storytelling.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Themed Dining</h3>
+                            <p>Savor medieval-inspired cuisine and modern delights in our atmospheric restaurants.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-hat-wizard"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Magic & Mystery</h3>
+                            <p>Discover hidden secrets and enchanting experiences throughout the castle grounds.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="park-highlights" data-aos="fade-up" data-aos-delay="400">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Extended Hours</h4>
+                        <p>Open until midnight during peak season</p>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4>Vast Kingdom</h4>
+                        <p>50+ acres of adventure</p>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Top Rated</h4>
+                        <p>4.8/5 visitor satisfaction</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <i class="fas fa-castle"></i>
+                </div>
+                <div class="divider-line"></div>
+            </div>
+        </section>
+
+        <section id="offers" class="offers-passes">
+            <div class="container">
+                <h2>Special Offers & Passes</h2>
+                <div class="cards-slider-container">
+                    <button class="scroll-btn scroll-btn-left">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="cards-slider">
+                        <div class="cards-track" id="cardsTrack">
+                            <div class="pass">
+                                <span class="badge">BEST VALUE</span>
+                                <img src="images/slider2.jpg" alt="Day Pass" />
+                                <h3>Day Pass</h3>
+                                <div class="price"><i class="fas fa-tag icon-text"></i>₹2200</div>
+                                <p>Unlimited rides from 10 AM to 6 PM. Includes fast-track access to 3 rides!</p>
+                                <a href="day-pass.html" class="see-details"><i
+                                        class="fas fa-info-circle icon-text"></i>See Pass</a>
+                            </div>
+                            <div class="pass">
+                                <img src="images/nightpass.jpeg" alt="Night Pass" />
+                                <h3>Night Pass</h3>
+                                <div class="price"><i class="fas fa-tag icon-text"></i>₹2600</div>
+                                <p>Experience magical nighttime adventures from 6 PM to midnight with special light
+                                    shows.</p>
+                                <a href="night-pass.html" class="see-details"><i
+                                        class="fas fa-info-circle icon-text"></i>See Pass</a>
+                            </div>
+                            <div class="offer">
+                                <span class="featured">POPULAR</span>
+                                <img src="images/tandembungee.jpg" alt="Tandem Bungee Offer" />
+                                <h3>Tandem Bungee Offer</h3>
+                                <div class="price"><i class="fas fa-tag icon-text"></i>25% OFF</div>
+                                <p>Experience the thrill of tandem bungee jumping with our special seasonal discount.
+                                </p>
+                                <a href="bungee-pass.html" class="see-details"><i
+                                        class="fas fa-info-circle icon-text"></i>See Offer</a>
+                            </div>
+                            <div class="offer">
+                                <span class="badge">LIMITED TIME</span>
+                                <img src="images/familypass.webp" alt="Family Package" />
+                                <h3>Family Package</h3>
+                                <div class="price"><i class="fas fa-tag icon-text"></i>₹1500</div>
+                                <p>Special rates for families of 4. Create lasting memories with all-inclusive access!
+                                </p>
+                                <a href="family-pass.html" class="see-details"><i
+                                        class="fas fa-info-circle icon-text"></i>See Offer</a>
+                            </div>
+                            <div class="offer">
+                                <span class="badge">NEW</span>
+                                <img src="images/studentspass.webp" alt="Student Discount" />
+                                <h3>Student Special</h3>
+                                <div class="price"><i class="fas fa-tag icon-text"></i>30% OFF</div>
+                                <p>Students get exclusive discounts on all rides. Valid ID required for verification.
+                                </p>
+                                <a href="#" class="see-details"><i class="fas fa-info-circle icon-text"></i>See
+                                    Offer</a>
+                            </div>
+                            <div class="offer">
+                                <span class="badge">WEEKEND</span>
+                                <img src="images/datenightdinner.jpeg" alt="Couple Package" />
+                                <h3>Couple's Adventure</h3>
+                                <div class="price"><i class="fas fa-tag icon-text"></i>₹3200</div>
+                                <p>Romantic adventure package for two with dinner included. Perfect for date nights!</p>
+                                <a href="#" class="see-details"><i class="fas fa-info-circle icon-text"></i>See
+                                    Offer</a>
+                            </div>
+                            <div class="offer">
+                                <span class="badge">SEASONAL</span>
+                                <img src="images/birthdayoffer.jpg" alt="Birthday Special" />
+                                <h3>Birthday Bash</h3>
+                                <div class="price"><i class="fas fa-tag icon-text"></i>FREE ENTRY</div>
+                                <p>Celebrate your birthday with us! Free entry on your special day with valid ID.</p>
+                                <a href="#" class="see-details"><i class="fas fa-info-circle icon-text"></i>See
+                                    Offer</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button class="scroll-btn scroll-btn-right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <!-- Newsletter Section -->
+                <div class="newsletter-section">
+                    <h3>Subscribe and receive ₹500 off your first booking above ₹2000</h3>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email address">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <p class="terms-text">By subscribing you agree to our <a href="/terms">Terms & Conditions and
+                            Privacy Policy</a></p>
+                    <p class="availability">We're available 9:00am – 8:00pm</p>
+                </div>
+
+                <!-- Footer Content -->
+                <div class="footer-content">
+                    <!-- About Column -->
+                    <div class="footer-column">
+                        <h4 class="castlevaniaFont">Castlevania</h4>
+                        <p>Where thrilling adventures meet magical experiences. Creating unforgettable memories with
+                            world-class attractions and entertainment. Step into a world of mystery, excitement, and
+                            gothic grandeur at Castlevania Adventure Park.</p>
+
+                        <!-- Stats -->
+                        <div class="footer-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Thrilling Rides</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1M+</span>
+                                <span class="stat-label">Visitors</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Support</span>
+                            </div>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="contact-info">
+                            <a href="tel:+917121234567">(+91) 712-123-4567</a>
+                            <a href="mailto:info@castlevania.com">info@castlevania.com</a>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Information Column -->
+                    <div class="footer-column">
+                        <h4 class="castlevaniaFont">Information</h4>
+                        <ul class="footer-links">
+                            <li><a href="/safety">Safety Guide</a></li>
+                            <li><a href="/map">Park Map</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="footer-column">
+                        <h4 class="castlevaniaFont">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="/attractions">Attractions</a></li>
+                            <li><a href="/dreamfeast">DreamFeast</a></li>
+                            <li><a href="/events">Special Events</a></li>
+                            <li><a href="/corporate">Corporate Bookings</a></li>
+                            <li><a href="/account">My Account</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="footer-links">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms and Conditions</a>
+                        <a href="/cancellation">Cancellation Policy</a>
+                    </div>
+                    <p class="copyright">© 2025 Castlevania Adventure Park. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <div id="booking-popup" class="booking-popup">
+            <div class="popup-content">
+                <a href="#" class="close-popup" aria-label="Close Booking Popup">&times;</a>
+                <h3>Ready for Adventure?</h3>
+                <p>Reserve your passes now and enjoy a thrilling day at Castlevania!</p>
+                <a href=" " class="btn book-now"><i class="fas fa-calendar-check icon-text"></i>Book Now</a>
+            </div>
+        </div>
+
+        <!-- Auth Popup -->
+        <div id="authPopup" class="auth-popup">
+            <div class="auth-popup-overlay"></div>
+            <div class="auth-popup-content">
+                <button class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <!-- Login View -->
+                <div id="loginView" class="auth-view active">
+                    <div class="auth-header">
+                        <h2>Login</h2>
+                        <p>or <a href="#" class="toggle-view" data-view="signup">create an account</a></p>
+                    </div>
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" required placeholder="Enter your password">
+                        </div>
+                        <div class="form-message"></div>
+                        <button type="submit" class="auth-btn">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Login
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Signup View -->
+                <div id="signupView" class="auth-view">
+                    <div class="auth-header">
+                        <h2>Create Account</h2>
+                        <p>or <a href="#" class="toggle-view" data-view="login">login to existing account</a></p>
+                    </div>
+                    <form id="signupForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" required placeholder="Create a password">
+                            <small class="help-text">Password must be at least 8 characters long and include both
+                                letters and numbers</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupConfirmPassword">Confirm Password</label>
+                            <input type="password" id="signupConfirmPassword" required
+                                placeholder="Confirm your password">
+                        </div>
+                        <div class="form-message"></div>
+                        <button type="submit" class="auth-btn">
+                            <i class="fas fa-user-plus"></i>
+                            Create Account
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="/client/js/pages/home.js"></script>
+        <script src="/client/js/components/auth.js"></script>
+    </body>
+
+</html>

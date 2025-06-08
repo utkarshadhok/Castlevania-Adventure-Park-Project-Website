@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - Castlevania Adventure Park</title>
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/auth.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Poppins:wght@300;400;500;600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Castlevania</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dreamfeast.html">DreamFeast HQ</a>
+                <a href="booking.html">Book Now</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <main class="auth-container">
+            <div class="auth-card">
+                <h1>Welcome Back</h1>
+                <p class="auth-subtitle">Enter your credentials to access your account</p>
+
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" name="password" required>
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group remember-forgot">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn auth-btn">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </form>
+
+                <div class="auth-separator">
+                    <span>or</span>
+                </div>
+
+                <div class="social-auth">
+                    <button class="btn social-btn google">
+                        <img src="../assets/images/google-icon.png" alt="Google">
+                        Continue with Google
+                    </button>
+                    <button class="btn social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Continue with Facebook
+                    </button>
+                </div>
+
+                <p class="auth-redirect">
+                    Don't have an account? <a href="register.html">Sign up</a>
+                </p>
+            </div>
+        </main>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>About Castlevania</h4>
+                    <p>Castlevania is a premier adventure park offering over 50 attractions—from adrenaline-pumping rides to family-friendly fun. With over 1 million happy guests, we pride ourselves on exceptional service and unforgettable memories.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dreamfeast.html">DreamFeast HQ</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 123-456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@castlevania.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Dracula Street, Transylvania</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul class="social-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                    <div class="newsletter">
+                        <h4>Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <p>&copy; 2024 Castlevania Adventure Park. All rights reserved.</p>
+        </footer>
+
+        <script src="../scripts/utils/constants.js" type="module"></script>
+        <script src="../scripts/nav.js" type="module"></script>
+        <script src="../scripts/auth.js" type="module"></script>
+    </body>
+
+</html>
