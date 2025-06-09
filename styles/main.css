@@ -30,7 +30,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-wrap: break-word;
 }
+
+html, body { width: 100vw; overflow-x: hidden; }
 
 /* Base Typography */
 body {
@@ -57,12 +60,7 @@ h1, h2, h3, h4, h5, h6 {
    Layout & Grid
    ========================================================================== */
 
-.container {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-  width: 100%;
-}
+.container, section { padding: 1rem; margin: 0 auto; max-width: 100%; }
 
 section {
   width: 100%;
@@ -1773,7 +1771,7 @@ main > section:last-of-type {
 }
 @media (max-width: 600px) {
   html, body { width: 100vw; overflow-x: hidden; }
-  nav { height: 54px; padding: 0 0.5rem; flex-direction: row; align-items: center; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; width: 100vw; }
+  nav { height: 54px; padding: 0.2rem 0.5rem; flex-direction: row; align-items: center; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; width: 100vw; }
   .logo { font-size: 1.3rem; margin-left: 0.5rem; }
   .menu-toggle { display: block; background: none; border: none; font-size: 2.2rem; color: var(--gold); margin-left: auto; margin-right: 1rem; }
   nav .menu { width: 100vw; position: fixed; top: 54px; left: 0; right: 0; z-index: 999; }

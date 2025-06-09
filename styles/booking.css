@@ -1019,4 +1019,32 @@ main > section:last-of-type {
     .main-footer { padding: 0.7rem 0 0.2rem; }
     .message, .message-error, .message-success, .message-warning, .message-info { font-size: 1.1rem; padding: 0.7rem; }
     *:hover { box-shadow: none !important; filter: none !important; }
+}
+
+* { box-sizing: border-box; word-wrap: break-word; }
+html, body { width: 100vw; overflow-x: hidden; }
+.container, section { padding: 1rem; margin: 0 auto; max-width: 100%; }
+@media (max-width: 768px) {
+  nav .nav-links { display: none; flex-direction: column; width: 100%; }
+  nav .hamburger { display: block; cursor: pointer; }
+  nav.active .nav-links { display: flex; }
+  .footer { flex-direction: column; }
+  .footer-column { flex: 1 1 100%; margin-bottom: 1rem; }
+}
+@media (max-width: 600px) {
+  .navbar { height: 44px; padding: 0.1rem 0.2rem; width: 100vw; }
+  .logo { font-size: 1.1rem; margin-left: 4px; }
+  .nav-links { gap: 0; flex-direction: column; width: 100vw; }
+  .nav-links a { font-size: 1.1rem; width: 100vw; padding: 1.2rem 2rem; border-bottom: 1px solid #222; }
+  .booking-container, .offers-section, .form-section { width: 100vw !important; max-width: 100vw !important; padding: 0.5rem 0.1rem !important; flex-direction: column !important; gap: 0.5rem !important; }
+  .offer-card { width: 100vw !important; min-width: 100vw !important; padding: 0.7rem 0.1rem; border-radius: 0; margin: 0.5rem 0; }
+  .offer-card h3, .form-section h2 { font-size: 1.2rem; }
+  .offer-card p, .offer-card .price { font-size: 1.1rem; }
+  .explore-btn, .book-btn, .btn, .btn-primary { font-size: 1.2rem !important; padding: 1.2rem 0.5rem !important; width: 100vw !important; border-radius: 14px !important; margin: 0.5rem 0; }
+  .form-group input, .form-group select, .form-group textarea { font-size: 1.2rem; padding: 1.2rem; width: 100vw; box-sizing: border-box; }
+  .footer-content, .footer-column, .footer-links, .footer-bottom { width: 100vw !important; flex-direction: column !important; }
+  .footer-column { margin-bottom: 1rem; }
+  .main-footer { padding: 0.7rem 0 0.2rem; }
+  .message, .message-error, .message-success, .message-warning, .message-info { font-size: 1.1rem; padding: 0.7rem; }
+  *:hover { box-shadow: none !important; filter: none !important; }
 } 
