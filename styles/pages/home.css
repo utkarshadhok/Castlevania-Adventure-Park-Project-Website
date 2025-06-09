@@ -430,4 +430,27 @@
   .offers-passes h2 {
     font-size: 1.8rem;
   }
+}
+
+@media (max-width: 1100px) {
+  .hero-content { max-width: 98vw; }
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-content p { font-size: 1.1rem; }
+  .cards-slider-container { padding: 0 10px; }
+  .offer, .pass { width: 220px; min-width: 220px; }
+  .offer img, .pass img { height: 120px; }
+}
+@media (max-width: 600px) {
+  html, body { width: 100vw; overflow-x: hidden; }
+  .hero, .slider-container, .slide img { width: 100vw !important; min-width: 100vw !important; max-width: 100vw !important; height: 220px !important; object-fit: cover; }
+  .hero-content { width: 96vw; left: 50%; transform: translateX(-50%); padding: 0 2vw; }
+  .explore-btn { font-size: 1.2rem; padding: 1.2rem 0.5rem; width: 100vw; border-radius: 14px; margin: 0.5rem 0; }
+  .cards-slider-container, .cards-track { width: 100vw !important; padding: 0 !important; gap: 0 !important; }
+  .offer, .pass { width: 100vw !important; min-width: 100vw !important; padding: 0.7rem 0.1rem; border-radius: 0; margin: 0.5rem 0; }
+  .offer img, .pass img { width: 100vw !important; height: 120px !important; border-radius: 0; }
+  .about, .offers-passes { width: 100vw !important; padding: 0.5rem 0.1rem !important; }
+  .about h2, .offers-passes h2 { font-size: 1.3rem; }
+  .about p, .offer p, .pass p { font-size: 1.1rem; }
+  .see-details, .book-now { width: 100vw; font-size: 1.2rem; padding: 1.2rem 0.5rem; border-radius: 14px; }
+  *:hover { box-shadow: none !important; filter: none !important; }
 } 

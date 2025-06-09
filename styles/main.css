@@ -1761,4 +1761,44 @@ main > section:last-of-type {
   main {
     margin-bottom: 35px;
   }
+}
+
+@media (max-width: 1100px) {
+  .container { max-width: 98vw; padding: 0 1vw; }
+  nav .menu ul { gap: 12px; }
+  .logo { font-size: 1.5rem; }
+  h1, h2, h3, h4, h5, h6 { font-size: 1.5rem; }
+  section { min-height: 400px; padding: 1.2rem 0; }
+  .hero-content { max-width: 95vw; }
+}
+@media (max-width: 600px) {
+  html, body { width: 100vw; overflow-x: hidden; }
+  nav { height: 54px; padding: 0 0.5rem; flex-direction: row; align-items: center; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; width: 100vw; }
+  .logo { font-size: 1.3rem; margin-left: 0.5rem; }
+  .menu-toggle { display: block; background: none; border: none; font-size: 2.2rem; color: var(--gold); margin-left: auto; margin-right: 1rem; }
+  nav .menu { width: 100vw; position: fixed; top: 54px; left: 0; right: 0; z-index: 999; }
+  nav .menu ul { flex-direction: column; align-items: flex-start; gap: 0; width: 100vw; background: var(--black); position: fixed; top: 54px; left: 0; right: 0; display: none; min-height: calc(100vh - 54px); }
+  nav .menu ul.show { display: flex; }
+  nav .menu ul li { width: 100vw; }
+  nav .menu ul li a { width: 100vw; padding: 1.2rem 2rem; font-size: 1.2rem; border-bottom: 1px solid #222; }
+  .search-form { width: 100vw; margin: 0.5rem 0; }
+  .container, section, main { width: 100vw !important; max-width: 100vw !important; padding: 0.5rem 0.2rem !important; }
+  section, .main-footer, .footer-content, .footer-column, .footer-links, .footer-bottom { width: 100vw !important; }
+  .hero, .slider-container, .slide img, .slider img { width: 100vw !important; min-width: 100vw !important; max-width: 100vw !important; height: 220px !important; object-fit: cover; }
+  .hero-content { width: 96vw; left: 50%; transform: translateX(-50%); padding: 0 2vw; }
+  .explore-btn, .btn, .btn-primary, .see-details, .book-now, .add-to-cart, .checkout, .clear-cart { font-size: 1.2rem !important; padding: 1.2rem 0.5rem !important; width: 100vw !important; border-radius: 14px !important; margin: 0.5rem 0; }
+  h1, h2, h3, h4, h5, h6 { font-size: 1.3rem; }
+  .offer, .pass, .feature-card, .highlight-card { width: 100vw !important; min-width: 100vw !important; margin: 0.5rem 0; box-shadow: none; border-radius: 0; }
+  .cards-slider-container, .cards-track, .about-features, .park-highlights { padding: 0 !important; gap: 0 !important; flex-direction: column !important; }
+  .feature-card, .highlight-card { margin: 0.5rem 0; }
+  .offer img, .pass img { width: 100vw !important; height: 120px !important; border-radius: 0; }
+  .form-group input, .form-group select, .form-group textarea { font-size: 1.2rem; padding: 1.2rem; width: 100vw; box-sizing: border-box; }
+  .form-section, .booking-form, .auth-form, .popup-content { padding: 0.7rem 0.1rem; width: 100vw; }
+  .newsletter-section, .footer-column, .footer-links, .footer-bottom { width: 100vw; }
+  .footer-content { flex-direction: column; gap: 1.2rem; }
+  .footer-column { width: 100vw; margin-bottom: 1rem; }
+  .main-footer { padding: 0.7rem 0 0.2rem; }
+  .message, .message-error, .message-success, .message-warning, .message-info { font-size: 1.1rem; padding: 0.7rem; }
+  .copyright { font-size: 1rem; }
+  *:hover { box-shadow: none !important; filter: none !important; }
 } 
