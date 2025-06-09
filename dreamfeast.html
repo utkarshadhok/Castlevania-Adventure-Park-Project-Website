@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description"
+            content="DreamFeast HQ - Castlevania Adventure Park's premier dining experience. Order food for pickup or delivery." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DreamFeast HQ - Castlevania Adventure Park</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Lobster&family=Poppins:wght@300;400;600&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <!-- Base Styles -->
+        <link rel="stylesheet" href="styles/main.css" />
+        <!-- Component Styles -->
+        <link rel="stylesheet" href="styles/components/auth.css" />
+        <!-- Page Specific Styles -->
+        <link rel="stylesheet" href="styles/pages/dreamfeast.css" />
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo">Castlevania</div>
+            <div class="menu">
+                <ul class="nav-links">
+                    <li><a href="/" class="active"><i class="fas fa-home icon-text"></i>Home</a></li>
+                </ul>
+            </div>
+            <form action="#" class="search-form">
+                <input type="text" id="search" placeholder="Search menu items..." />
+                <button type="button" class="search-icon btn-sm">
+                    <i class="fa fa-search"></i>
+                </button>
+                <button type="button" class="close-icon btn-sm">
+                    <i class="fa fa-times"></i>
+                </button>
+            </form>
+        </nav>
+
+        <section class="hero" style="background: url('images/foodplacecafe.avif') center center/cover no-repeat;">
+            <div class="slider-container">
+                <div class="slider-overlay"></div>
+                <div class="hero-content">
+                    <h1>Welcome to <span class="castlevaniaFont">DreamFeast HQ</span></h1>
+                    <p>Savor the magic with our delectable treats and mystical beverages</p>
+                    <a href="#menu" class="explore-btn btn-sm"><i class="fas fa-utensils icon-text"></i>View Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <div class="container">
+                <h2 class="section-header">Our Magical Menu</h2>
+                <div class="menu-categories">
+                    <button class="category-btn btn-sm active" data-category="all">All</button>
+                    <button class="category-btn btn-sm" data-category="mains">Main Course</button>
+                    <button class="category-btn btn-sm" data-category="snacks">Snacks</button>
+                    <button class="category-btn btn-sm" data-category="desserts">Desserts</button>
+                    <button class="category-btn btn-sm" data-category="beverages">Beverages</button>
+                </div>
+
+                <div class="menu-items">
+                    <!-- Main Course -->
+                    <div class="menu-item" data-category="mains">
+                        <img src="images/whitesausepasta.avif" alt="Vampire's White Sauce Pasta">
+                        <div class="item-details">
+                            <h3>Vampire's White Sauce Pasta</h3>
+                            <p class="description">Creamy garlic pasta with parmesan and herbs, served with garlic bread
+                            </p>
+                            <div class="price">₹299</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="mains">
+                        <img src="images/redsausepasta.jpeg" alt="Blood Moon Pasta">
+                        <div class="item-details">
+                            <h3>Blood Moon Pasta</h3>
+                            <p class="description">Spicy red sauce pasta with Italian herbs and garlic bread</p>
+                            <div class="price">₹279</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="mains">
+                        <img src="images/pizza.jpeg" alt="Dracula's Supreme Pizza">
+                        <div class="item-details">
+                            <h3>Dracula's Supreme Pizza</h3>
+                            <p class="description">Loaded with cheese, pepperoni, and our secret spice blend</p>
+                            <div class="price">₹399</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="mains">
+                        <img src="images/noodles.jpeg" alt="Mystic Asian Noodles">
+                        <div class="item-details">
+                            <h3>Mystic Asian Noodles</h3>
+                            <p class="description">Stir-fried noodles with vegetables in our special sauce</p>
+                            <div class="price">₹249</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="mains">
+                        <img src="images/sushi.jpeg" alt="Vampire's Sushi Roll">
+                        <div class="item-details">
+                            <h3>Vampire's Sushi Roll</h3>
+                            <p class="description">Fresh sushi rolls with premium fish and avocado</p>
+                            <div class="price">₹349</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Snacks -->
+                    <div class="menu-item" data-category="snacks">
+                        <img src="images/fries.jpeg" alt="Castle Fries">
+                        <div class="item-details">
+                            <h3>Castle Fries</h3>
+                            <p class="description">Crispy golden fries with our signature seasoning</p>
+                            <div class="price">₹149</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="images/p43tzel.jpeg" alt="Twisted Pretzel">
+                        <div class="item-details">
+                            <h3>Twisted Pretzel</h3>
+                            <p class="description">Freshly baked pretzel with sea salt and dipping sauce</p>
+                            <div class="price">₹129</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="images/popcorn.jpeg" alt="Haunted Popcorn">
+                        <div class="item-details">
+                            <h3>Haunted Popcorn</h3>
+                            <p class="description">Caramel and cheese popcorn mix with a spooky twist</p>
+                            <div class="price">₹99</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="snacks">
+                        <img src="images/taco.jpeg" alt="Monster Taco">
+                        <div class="item-details">
+                            <h3>Monster Taco</h3>
+                            <p class="description">Loaded taco with meat, cheese, and fresh vegetables</p>
+                            <div class="price">₹199</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Desserts -->
+                    <div class="menu-item" data-category="desserts">
+                        <img src="images/cake.jpeg" alt="Dark Forest Cake">
+                        <div class="item-details">
+                            <h3>Dark Forest Cake</h3>
+                            <p class="description">Rich chocolate cake with forest berries and cream</p>
+                            <div class="price">₹249</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="desserts">
+                        <img src="images/cupcakes.jpeg" alt="Spooky Cupcakes">
+                        <div class="item-details">
+                            <h3>Spooky Cupcakes</h3>
+                            <p class="description">Assorted Halloween-themed cupcakes with unique flavors</p>
+                            <div class="price">₹179</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="desserts">
+                        <img src="images/waffle.jpeg" alt="Gothic Waffle">
+                        <div class="item-details">
+                            <h3>Gothic Waffle</h3>
+                            <p class="description">Belgian waffle with dark chocolate and berry compote</p>
+                            <div class="price">₹199</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Beverages -->
+                    <div class="menu-item" data-category="beverages">
+                        <img src="images/smoothie.jpeg" alt="Mystic Smoothie">
+                        <div class="item-details">
+                            <h3>Mystic Smoothie</h3>
+                            <p class="description">Fresh fruit smoothie with magical toppings</p>
+                            <div class="price">₹159</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="beverages">
+                        <img src="images/icetea.jpeg" alt="Transylvanian Ice Tea">
+                        <div class="item-details">
+                            <h3>Transylvanian Ice Tea</h3>
+                            <p class="description">Special blend ice tea with mint and citrus</p>
+                            <div class="price">₹129</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="beverages">
+                        <img src="images/juices.jpeg" alt="Fresh Blood Orange Juice">
+                        <div class="item-details">
+                            <h3>Fresh Blood Orange Juice</h3>
+                            <p class="description">Freshly squeezed blood orange juice with a hint of mint</p>
+                            <div class="price">₹149</div>
+                            <button class="add-to-cart"><i class="fas fa-plus icon-text"></i>Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="cart-popup" class="booking-popup">
+            <div class="popup-content cart-content">
+                <a href="#" class="close-popup" aria-label="Close Cart">&times;</a>
+                <h3>Your Order</h3>
+                <div id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-total">
+                    <p>Total: <span id="cart-total">₹0</span></p>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn clear-cart"><i class="fas fa-trash icon-text"></i>Clear Cart</button>
+                    <button class="btn checkout"><i class="fas fa-shopping-cart icon-text"></i>Checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <div class="container">
+                <div class="newsletter-section">
+                    <h3>Subscribe and receive ₹500 off your first booking above ₹2000</h3>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email address">
+                        <button class="btn btn-primary btn-sm">Subscribe</button>
+                    </div>
+                    <p class="terms-text">By subscribing you agree to our <a href="/terms">Terms & Conditions and Privacy Policy</a></p>
+                    <p class="availability">We're available 9:00am – 8:00pm</p>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <div class="footer-logo"><span class="castlevaniaFont">Castlevania</span></div>
+                        <p>Where thrilling adventures meet magical experiences. Creating unforgettable memories with world-class attractions and entertainment.</p>
+                        <div class="contact-info">
+                            <a href="tel:+917121234567">(+91) 712-123-4567</a> - <a href="mailto:info@castlevania.com">info@castlevania.com</a>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="castlevaniaFont">Information</h4>
+                        <ul class="footer-links">
+                            <li><a href="/safety">Safety Guide</a></li>
+                            <li><a href="/map">Park Map</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="castlevaniaFont">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="/attractions">Attractions</a></li>
+                            <li><a href="/dreamfeast">DreamFeast</a></li>
+                            <li><a href="/events">Special Events</a></li>
+                            <li><a href="/corporate">Corporate Bookings</a></li>
+                            <li><a href="/account">My Account</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom" style="margin-bottom:0.5rem;">
+                    <div class="footer-links">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms and Conditions</a>
+                        <a href="/cancellation">Cancellation Policy</a>
+                    </div>
+                    <p class="copyright">© 2025 Castlevania Adventure Park. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Auth Popup -->
+        <div id="authPopup" class="auth-popup">
+            <!-- Auth popup content will be loaded here -->
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Menu category filtering
+                const categoryButtons = document.querySelectorAll('.category-btn');
+                const menuItems = document.querySelectorAll('.menu-item');
+
+                categoryButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const category = button.dataset.category;
+
+                        // Update active button
+                        categoryButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+
+                        // Filter menu items
+                        menuItems.forEach(item => {
+                            if (category === 'all' || item.dataset.category === category) {
+                                item.style.display = 'flex';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+
+                // Shopping cart functionality
+                let cart = [];
+                const addToCartButtons = document.querySelectorAll('.add-to-cart');
+                const cartItemsContainer = document.getElementById('cart-items');
+                const cartTotalElement = document.getElementById('cart-total');
+                const clearCartButton = document.querySelector('.clear-cart');
+                const checkoutButton = document.querySelector('.checkout');
+
+                addToCartButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const menuItem = button.closest('.menu-item');
+                        const itemName = menuItem.querySelector('h3').textContent;
+                        const itemPrice = parseInt(menuItem.querySelector('.price').textContent.replace('₹', ''));
+
+                        // Add item to cart
+                        cart.push({ name: itemName, price: itemPrice });
+                        updateCart();
+
+                        // Show confirmation
+                        button.innerHTML = '<i class="fas fa-check icon-text"></i>Added';
+                        button.classList.add('added');
+                        setTimeout(() => {
+                            button.innerHTML = '<i class="fas fa-plus icon-text"></i>Add to Cart';
+                            button.classList.remove('added');
+                        }, 2000);
+                    });
+                });
+
+                function updateCart() {
+                    cartItemsContainer.innerHTML = '';
+                    let total = 0;
+
+                    cart.forEach((item, index) => {
+                        const itemElement = document.createElement('div');
+                        itemElement.className = 'cart-item';
+                        itemElement.innerHTML = `
+                        <span>${item.name}</span>
+                        <span>₹${item.price}</span>
+                        <button class="remove-item" data-index="${index}">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    `;
+                        cartItemsContainer.appendChild(itemElement);
+                        total += item.price;
+                    });
+
+                    cartTotalElement.textContent = `₹${total}`;
+
+                    // Add event listeners to remove buttons
+                    document.querySelectorAll('.remove-item').forEach(button => {
+                        button.addEventListener('click', () => {
+                            const index = parseInt(button.dataset.index);
+                            cart.splice(index, 1);
+                            updateCart();
+                        });
+                    });
+                }
+
+                clearCartButton.addEventListener('click', () => {
+                    cart = [];
+                    updateCart();
+                });
+
+                checkoutButton.addEventListener('click', () => {
+                    if (cart.length === 0) {
+                        alert('Please add items to your cart before checking out.');
+                        return;
+                    }
+                    // Here you would typically handle the checkout process
+                    alert('Thank you for your order! We will prepare it for pickup.');
+                    cart = [];
+                    updateCart();
+                    window.location.hash = '';
+                });
+
+                // Navigation and search functionality (reused from homepage)
+                const hamburger = document.querySelector('button');
+                const menu = document.querySelector('.menu');
+                const searchInput = document.getElementById('search');
+                const searchIcon = document.querySelector('.fa-search');
+                const closeIcon = document.querySelector('.fa-times');
+
+                if (hamburger && menu) {
+                    hamburger.addEventListener('click', () => {
+                        menu.classList.toggle('expand-mobile');
+                        hamburger.classList.toggle('expand-icon');
+                    });
+                }
+
+                if (searchIcon && searchInput) {
+                    searchIcon.addEventListener('click', () => {
+                        searchInput.classList.add('expand');
+                        searchInput.focus();
+                    });
+                }
+
+                if (closeIcon && searchInput) {
+                    closeIcon.addEventListener('click', () => {
+                        searchInput.classList.remove('expand');
+                        searchInput.value = '';
+                    });
+                }
+
+                // Menu search functionality
+                if (searchInput) {
+                    searchInput.addEventListener('input', () => {
+                        const searchTerm = searchInput.value.toLowerCase();
+                        menuItems.forEach(item => {
+                            const itemName = item.querySelector('h3').textContent.toLowerCase();
+                            const itemDescription = item.querySelector('.description').textContent.toLowerCase();
+
+                            if (itemName.includes(searchTerm) || itemDescription.includes(searchTerm)) {
+                                item.style.display = 'flex';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    });
+                }
+            });
+        </script>
+    </body>
+
+</html>
